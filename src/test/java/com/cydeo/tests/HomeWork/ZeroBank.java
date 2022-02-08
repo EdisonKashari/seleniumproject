@@ -18,6 +18,7 @@ public class ZeroBank {
         driver.manage().window().maximize();
 
         driver.get("http://zero.webappsecurity.com/login.html");
+        
 
         WebElement header = driver.findElement(By.tagName("h3"));
 
