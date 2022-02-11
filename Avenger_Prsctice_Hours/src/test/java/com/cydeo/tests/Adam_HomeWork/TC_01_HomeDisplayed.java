@@ -15,13 +15,17 @@ public class TC_01_HomeDisplayed {
         driver.get("https://vytrack.com/");
         // //3-verify Home is displayed
         Thread.sleep(3000);
-       // WebElement home = driver.findElement(By.xpath("//a[@aria-current='page']"));
-        WebElement home1 = driver.findElement(By.cssSelector("a[aria-current='page']"));
+        // WebElement home = driver.findElement(By.xpath("//a[@aria-current='page']"));
+          WebElement home1 = driver.findElement(By.cssSelector("a[aria-current='page']"));
+       // WebElement home1 = driver.findElement(By.xpath("//*[@id=\"menu-item-844\"]/a"));
 
-
-      //  home.click();
 
         System.out.println(home1.getText());
+        if (home1.getText().equals("Home")) {
+            System.out.println("Passed");
+        } else {
+            System.out.println("Failed");
+        }
 
         Thread.sleep(3000);
         driver.close();

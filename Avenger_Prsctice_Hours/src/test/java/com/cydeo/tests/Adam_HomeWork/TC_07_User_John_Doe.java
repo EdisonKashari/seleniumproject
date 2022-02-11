@@ -31,6 +31,6 @@ public class TC_07_User_John_Doe {
        }else {
            System.out.println("The user is not John Doe");
        }
-       driver.close();
+     //  driver.close();
     }
 }
