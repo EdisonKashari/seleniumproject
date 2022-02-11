@@ -45,7 +45,7 @@ public class Forgot_Password_XPath_Css {
            System.out.println("FAILED");
        }
         Thread.sleep(3000);
-       driver.close();
+     //  driver.close();
 
         //4. Verify all WebElements are displayed.
     }
