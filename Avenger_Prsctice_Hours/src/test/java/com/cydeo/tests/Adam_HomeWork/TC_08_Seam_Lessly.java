@@ -16,9 +16,25 @@ public class TC_08_Seam_Lessly {
         WebElement password = driver.findElement(By.cssSelector("input[class='password-with-toggle']"));
         password.sendKeys("UserUser123");
         //4-verify password as "*****"
+        String type = password.getAttribute("type");
+        if (type.equals("password")){
+            System.out.println("Password is hidden and Passed");
+        }else {
+            System.out.println("Password is not hidden and Failed");
+        }
+
         //5-click eye icon
-        WebElement eye = driver.findElement(By.xpath("//a[@class='toggle-password']"));
-        eye.click();
+        driver.findElement(By.xpath("//a[@class='toggle-password']")).click();
+
+
+        type = password.getAttribute("type");
+
+        if (type.equals("text")){
+            System.out.println("Password is shown and Passed");
+        }else {
+            System.out.println("Password is not shown and Failed");
+        }
+
         //6-verify that password is shown
     }
 }

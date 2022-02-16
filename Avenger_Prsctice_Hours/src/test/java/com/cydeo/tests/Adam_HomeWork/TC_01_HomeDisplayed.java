@@ -19,6 +19,8 @@ public class TC_01_HomeDisplayed {
           WebElement home1 = driver.findElement(By.cssSelector("a[aria-current='page']"));
        // WebElement home1 = driver.findElement(By.xpath("//*[@id=\"menu-item-844\"]/a"));
 
+        System.out.println("home1.isDisplayed() = " + home1.isDisplayed());
+
 
         System.out.println(home1.getText());
         if (home1.getText().equals("Home")) {

@@ -15,7 +15,13 @@ public class TC_04_Login {
         // //3-verify Login is displayed
         Thread.sleep(3000);
         WebElement login = driver.findElement(By.xpath("//a[@href='http://app.vytrack.com']"));
+// WebElement loginWebElement = driver.findElement(By.xpath("//ul[@id='top-menu']//a[.='LOGIN']"));
+        if (login.isDisplayed()){
+            System.out.println("Passed");
+        }else {
+            System.out.println("Failed");
+        }
         Thread.sleep(3000);
-        login.click();
+
     }
 }

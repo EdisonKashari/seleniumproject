@@ -14,19 +14,17 @@ public class TC_03_Contact {
         driver.get("https://vytrack.com/");
         // //3-verify Contact is displayed and label is "Contact"
         WebElement contact = driver.findElement(By.xpath("//a[.='Contact']"));
-        Thread.sleep(3000);
-        contact.click();
+        // WebElement contactWebElement = driver.findElement(By.xpath("//ul[@id='top-menu']//*[contains(@href,'contact')]"));
+        Thread.sleep(2000);
 
-        System.out.println(driver.getTitle());
-
-        if (driver.getTitle().contains("Contact")){
+        if (contact.isDisplayed()) {
             System.out.println("Passed");
-        }else {
+        } else {
             System.out.println("Failed");
         }
 
-        Thread.sleep(3000);
-        driver.close();
+        Thread.sleep(2000);
+        //  driver.close();
 
     }
 }

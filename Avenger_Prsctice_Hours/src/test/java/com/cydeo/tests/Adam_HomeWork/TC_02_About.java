@@ -15,7 +15,13 @@ public class TC_02_About {
         // //3-verify About us is displayed
         Thread.sleep(3000);
         WebElement about = driver.findElement(By.cssSelector("a[href='https://vytrack.com/about-us/']"));
-        about.click();
+        System.out.println("about.isDisplayed() = " + about.isDisplayed());
+        if (about.isDisplayed()){
+            System.out.println("Passed");
+        }else {
+            System.out.println("Failed");
+        }
+
         Thread.sleep(3000);
         driver.close();
 

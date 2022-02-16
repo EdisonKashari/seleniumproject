@@ -23,5 +23,11 @@ public class TC_06_I_Should_Be_Able {
         WebElement password = driver.findElement(By.cssSelector("input[id='prependedInput2']"));
         password.sendKeys("UserUser123");
         //6-verify the password is hidden
+        String isHidden = password.getAttribute("type");
+        if (isHidden.equals("password")){
+            System.out.println("Password is hidden Passed");
+        }else {
+            System.out.println("Password is not hidden Failed");
+        }
     }
 }

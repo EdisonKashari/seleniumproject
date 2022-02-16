@@ -16,6 +16,7 @@ public class TC_05_Login_URL {
         // //3-click Login label
         Thread.sleep(3000);
         WebElement login = driver.findElement(By.xpath("//a[.='LOGIN']"));
+        // WebElement loginWebElement = driver.findElement(By.xpath("//ul[@id='top-menu']//a[.='LOGIN']"));
         login.click();
         // //4-verify the url contains login
 
