@@ -33,7 +33,9 @@ public class SimpleDropDown {
 
         WebElement currentDropdown = simpleDropdown.getFirstSelectedOption();
 
+
         String actualText = currentDropdown.getText();
+        System.out.println("currentDropdown.getText() = " + currentDropdown.getText());
 
         String expectedResult = "Please select an option";
 

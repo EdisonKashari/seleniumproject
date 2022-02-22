@@ -19,6 +19,8 @@ public class Selecting_Date {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://practice.cydeo.com/dropdown");
+       driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+
     }
 
     @Test
@@ -26,7 +28,7 @@ public class Selecting_Date {
 
 
         Select yearDropDown = new Select(driver.findElement(By.xpath("//select[@id='year']")));
-        yearDropDown.selectByVisibleText("1922");
+        yearDropDown.selectByVisibleText("1992");
 
 
 
@@ -38,13 +40,14 @@ public class Selecting_Date {
 
 
         String yearResult = yearDropDown .getFirstSelectedOption().getText();
-        Assert.assertEquals(yearResult,"1922");
+        Assert.assertEquals(yearResult,"1992");
 
         String monthActualResult = monthDropDown.getFirstSelectedOption().getText();
         Assert.assertEquals(monthActualResult,"December");
 
         String dayActualResult = dayDropDown.getFirstSelectedOption().getText();
-        Assert.assertEquals(dayActualResult,1);
+
+        Assert.assertEquals(dayActualResult,"1");
 
     }
 
