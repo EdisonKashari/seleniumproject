@@ -21,13 +21,13 @@ public class T1_WebTable_Verify {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+        driver.get("https://practice.cydeo.com/web-tables");
     }
 
     @Test
     public void verify_test() {
         //Go to: https://practice.cydeo.com/web-tables
-        driver.get("https://practice.cydeo.com/web-tables");
+
         //2. Verify Bob’s name is listed as expected.
         WebElement nameBobMartin = driver.findElement(By.xpath("//table[@class='SampleTable']/tbody/tr/td[.='Bob Martin']"));
         //Expected: “Bob Martin”
@@ -47,10 +47,21 @@ public class T1_WebTable_Verify {
     }
 
     @Test
-    public void test2(){
-        WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
+    public void test2() {
+        String costumerOrderDate1 = WebTableUtils.returnOrderDate(driver, "Alexandra Gray");
+
+        System.out.println("costumerOrderDate1 = " + costumerOrderDate1);
 
     }
+
+    //Using WebTableUtils.orderVerify(); method
+    @Test
+    public void test3() {
+        WebTableUtils.orderVerify(driver, "Bob Martin", "12/31/2021");
+    }
+
+
+
 
     @AfterMethod
     public void tearDown() {
