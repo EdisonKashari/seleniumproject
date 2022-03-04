@@ -8,10 +8,7 @@
     <artifactId>seleniumproject</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>Avenger_Prsctice_Hours</module>
-        <module></module>
-    </modules>
+
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
